@@ -54,6 +54,87 @@ class OnboardingScreen extends StatelessWidget {
               },
             ),
           ),
+          SizedBox(height: 20),
+          onBoardingList.length == 4
+              ? Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(left: 40, right: 40),
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(70),
+                      gradient: LinearGradient(
+                        colors: [Color(0xff25AE4B), Color(0xff0F481F)],
+                      ),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "yes, turn it on",
+                          style: TextStyle(
+                            color: Color(0xffffffff),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Container(
+                    margin: EdgeInsets.only(left: 40, right: 40),
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xffC2C2C2),
+                      borderRadius: BorderRadius.circular(70),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "cancel",
+                          style: TextStyle(
+                            color: Color(0xff455A64),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              )
+              : Container(
+                margin: EdgeInsets.only(left: 40, right: 40),
+                width: double.infinity,
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(70),
+                  gradient: LinearGradient(
+                    colors: [Color(0xff25AE4B), Color(0xff0F481F)],
+                  ),
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "continue",
+                      style: TextStyle(
+                        color: Color(0xffffffff),
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+          SizedBox(height: 20),
           CustomOnBoardingList(onBoardingProvider: onBoardingProvider),
         ],
       ),

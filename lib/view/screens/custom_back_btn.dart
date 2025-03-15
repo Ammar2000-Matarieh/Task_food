@@ -13,11 +13,10 @@ class CustomBackButton extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(left: 5, right: 5),
       width: double.infinity,
-      height: 30,
+      height: 40,
       child: TextButton(
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3)),
-          side: BorderSide(color: Colors.grey.shade500, width: 0.3),
         ),
         onPressed: () {
           if (onBoardingProvider.currentScreen > 0) {
@@ -28,9 +27,11 @@ class CustomBackButton extends StatelessWidget {
         },
         child: Text(
           "Skip",
-          style: Theme.of(
-            context,
-          ).textTheme.labelLarge!.copyWith(color: Colors.black, fontSize: 12),
+          style: Theme.of(context).textTheme.labelLarge!.copyWith(
+            color: Colors.black,
+            fontSize: 16,
+            fontWeight: FontWeight.w400,
+          ),
         ),
       ),
     );

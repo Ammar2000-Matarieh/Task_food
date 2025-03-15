@@ -12,9 +12,8 @@ class CustomButtonOnBoarding extends StatelessWidget {
       padding: EdgeInsets.only(left: 5, right: 5),
       width: double.infinity,
       height: 30,
-      child: MaterialButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3)),
-        textColor: Colors.white,
+      child: IconButton(
+        icon: Icon(Icons.arrow_forward, color: Colors.green),
         onPressed: () {
           if (onBoardingProvider.currentScreen == 2) {
             onBoardingProvider.buttonNext(context);
@@ -25,14 +24,6 @@ class CustomButtonOnBoarding extends StatelessWidget {
             );
           }
         },
-        color: Colors.amber,
-        child: Text(
-          "Countinue",
-          style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-            color: Colors.white,
-            fontSize: 13,
-          ),
-        ),
       ),
     );
   }
